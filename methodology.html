@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology &amp; sources &middot; Where New York came from</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --paper:#f6f1e7; --ink:#16130e; --ink-dim:#5d574a; --line:#cfc6b2; --rule:#16130e; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--paper); color:var(--ink); font-family:"Inter",system-ui,sans-serif;
+    line-height:1.6; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:780px; margin:0 auto; padding:40px 26px 80px; }
+  a.back{ font-weight:600; font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-dim);
+    text-decoration:none; border-bottom:1px solid var(--line); }
+  a.back:hover{ color:var(--ink); border-color:var(--ink); }
+  h1{ font-family:"Fraunces",Georgia,serif; font-weight:800; font-size:clamp(30px,5vw,44px); margin:18px 0 6px; line-height:1.04; }
+  .lede{ color:var(--ink-dim); font-size:16px; margin:0 0 28px; }
+  h2{ font-family:"Fraunces",Georgia,serif; font-weight:600; font-size:23px; margin:34px 0 10px;
+    border-top:2px solid var(--rule); padding-top:16px; }
+  p, li{ font-size:15px; }
+  code{ background:#ece4d3; padding:1px 5px; font-size:13.5px; }
+  table{ border-collapse:collapse; width:100%; margin:14px 0; font-size:12px; }
+  th, td{ border:1px solid var(--line); padding:5px 7px; text-align:right; font-variant-numeric:tabular-nums; }
+  th:first-child, td:first-child{ text-align:left; }
+  thead th{ background:#ece4d3; }
+  .note{ background:#efe8d9; border:1px solid var(--line); padding:14px 16px; margin:16px 0; font-size:14px; }
+  a{ color:#7c1d12; }
+  .scroll{ overflow-x:auto; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; Back to the chart</a>
+  <h1>Methodology &amp; sources</h1>
+  <p class="lede">This chart races New York City's foreign-born population by country of birth across the censuses from 1900 to 2020, and fades each wave as it recedes. Here is exactly where the data comes from, how the fade is defined and what it can and cannot show.</p>
+
+  <h2>What the chart shows</h2>
+  <p>Each bar is the number of <strong>foreign-born</strong> New Yorkers born in a given country at each decennial census &mdash; the immigrant, or first, generation. It does <em>not</em> include their US-born children or grandchildren. The chart shows the largest groups at any moment (the top dozen), so a country appears when it grows large enough and drops off when it is overtaken.</p>
+
+  <div class="note">
+    <strong>What the fade means &mdash; and what it doesn't.</strong> The fade is the heart of this chart, so be clear on what it is. The U.S. census can identify immigrants and (historically) their children by nation, but it <strong>cannot trace a group by country of birth past the second generation</strong> &mdash; by the third generation, descendants are simply recorded as American-born, with no foreign birthplace. So a wave that stops being replenished by new arrivals does two things at once: it <strong>shrinks</strong> (its immigrants age and die) and it <strong>disappears from the birthplace count</strong> (its grandchildren are no longer counted under that nation). We encode this by fading a bar once it is past its peak decade, in proportion to how far it has fallen from that peak. The fade is therefore a <strong>visual proxy for generational succession, not a measured count of third- or fourth-generation people</strong> &mdash; that figure does not exist in the historical data. A faded Italian or Irish bar does not mean those New Yorkers vanished; it means they became second-, third- and fourth-generation Americans whom the census no longer counts as Italy- or Ireland-born.</p>
+  </div>
+
+  <h2>Sources</h2>
+  <ul>
+    <li><strong>1970&ndash;2011:</strong> NYC Department of City Planning, <em>The Newest New Yorkers 2013 Edition</em>, Table 2-3, "Foreign-born Population by Area of Origin and Country of Birth, New York City, 1970&ndash;2011." <a href="https://www.nyc.gov/assets/planning/download/pdf/data-maps/nyc-population/nny2013/chapter2.pdf" target="_blank" rel="noopener">nyc.gov</a> (Underlying data: U.S. Census Bureau 1970&ndash;2000 censuses and the 2011 American Community Survey.) The chart places the 2011 ACS figures in the 2010 column.</li>
+    <li><strong>1900 and 1910:</strong> U.S. Census Bureau, 1910 Census, Volume 1, "Country of Birth of the Foreign-Born Population," Table 29 (distribution of the foreign-born population by principal countries of birth, cities of 250,000+, 1910 and 1900), New York city. <a href="https://www2.census.gov/library/publications/decennial/1910/volume-1/volume-1-p11.pdf" target="_blank" rel="noopener">census.gov</a></li>
+    <li><strong>1920 and 1930:</strong> U.S. Census Bureau, 1930 Census, Volume II (Population, General Report), Chapter 5, Table 9 ("Country of birth of the foreign-born population, by sex, for cities of 100,000 or more: 1930 and 1920"), New York, N.Y. <a href="https://www2.census.gov/library/publications/decennial/1930/population-volume-2/16440598v2ch06.pdf" target="_blank" rel="noopener">census.gov</a> The 1930 city total derived from this table (2,358,686) matches the published census total.</li>
+    <li><strong>1940, 1950, 1960:</strong> not yet transcribed from primary sources. These cells are left blank and the bars interpolate across them. For the large European groups the real trend across this span is a steady decline, so the interpolation understates none of the major peaks (which fall in 1900&ndash;1930) but should not be read as exact mid-century figures.</li>
+    <li><strong>2020:</strong> U.S. Census Bureau, American Community Survey 2022 5-year estimates, table B05006 ("Place of Birth for the Foreign-Born Population"), New York city. China combines the mainland, Hong Kong and Taiwan to match the City Planning definition used for 1970&ndash;2011. <a href="https://data.census.gov/table/ACSDT5Y2022.B05006?g=160XX00US3651000" target="_blank" rel="noopener">data.census.gov</a></li>
+    <li>City foreign-born totals cross-checked against NYC City Planning's "Foreign-born Population, New York City &amp; Boroughs, 1900&ndash;2010."</li>
+  </ul>
+  <p style="color:var(--ink-dim);font-size:13.5px;">Every filled figure is sourced to the volumes above. Where a decade's number for a country could not be reliably sourced, that cell is left blank rather than estimated, and the bar interpolates across the gap. The 2020 column uses the ACS 2022 5-year estimate (centered on 2020).</p>
+
+  <h2>Definitions and boundary changes</h2>
+  <ul>
+    <li><strong>Foreign-born</strong> = people living in New York City who were born outside the United States and its territories. This is the census definition; it includes naturalized citizens, lawful residents, and others.</li>
+    <li><strong>Poland</strong> did not exist as an independent state at the 1900&ndash;1910 censuses; Poles were counted under Russia, Austria and Germany. Poland appears as its own bar once the census recorded it as a country of birth.</li>
+    <li><strong>Russia / U.S.S.R.</strong> is shown as one continuous bar across the century, because the territory's label changed (Russian Empire &rarr; U.S.S.R. &rarr; Russia) while the migration story is continuous. <strong>Ukraine</strong> is broken out separately from 2000, when the census reported the former Soviet republics individually.</li>
+    <li><strong>Czechoslovakia</strong> and <strong>Yugoslavia</strong> are shown under those names for the years the census used them; their bars end when the census stopped reporting them.</li>
+    <li>Some early-century foreign-born counts (notably 1920, 1930 and 1950 in certain census tables) were tabulated for the <strong>white</strong> foreign-born only; for New York City in this era the difference is small, but it is noted here for transparency.</li>
+  </ul>
+
+  <h2>What is interpolated</h2>
+  <p>A census is taken once a decade. Between censuses, each country's value is linearly interpolated so the bars move continuously. <strong>The numbers are exact only at each decade</strong> (when the year reads 1900, 1910, … 2020). A wave that the census had not yet recorded grows in from zero; a bar with no further data ebbs toward zero.</p>
+
+  <h2>Limitations</h2>
+  <ul>
+    <li>This is a chart of <strong>birthplace, not ancestry or ethnicity</strong>. It tracks immigrants, not descendants. The companion chart, "Who lives here," shows the city by race and ethnicity, which captures all generations.</li>
+    <li>The fade is illustrative. Two different waves past their peaks are not necessarily at the same "generational" stage; the fade reflects decline from peak, which is a reasonable but imperfect stand-in.</li>
+    <li>Country categories and borders shifted enormously over 120 years; cross-century comparisons for any single country should be read as broadly indicative.</li>
+    <li>Built with AI assistance. Sources and definitions are laid out here so any figure can be checked against the Census Bureau and City Planning originals.</li>
+  </ul>
+
+  <h2 id="data">The full data</h2>
+  <p>Foreign-born New Yorkers by country of birth, by census year, as used by the chart. (This table is finalized once all primary-source cells are confirmed.)</p>
+  <div class="scroll"><div id="dataTable">Loading&hellip;</div></div>
+
+<script>
+fetch('data/data.json').then(r=>r.json()).then(d=>{
+  const years=d.years;
+  let h='<table><thead><tr><th>Country</th>'+years.map(y=>'<th>'+y+'</th>').join('')+'</tr></thead><tbody>';
+  for(const c of d.countries){
+    h+='<tr><td>'+c.name+'</td>'+c.counts.map(v=>'<td>'+(v==null?'&mdash;':v.toLocaleString('en-US'))+'</td>').join('')+'</tr>';
+  }
+  h+='</tbody></table>';
+  document.getElementById('dataTable').innerHTML=h;
+});
+</script>
+</div>
+</body>
+</html>

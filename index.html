@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Where New York came from &middot; Foreign-born New Yorkers by country of birth, 1900&ndash;2020</title>
+<meta name="description" content="An animated bar-chart race of New York City's foreign-born population by country of birth from 1900 to 2020. Each wave's bar fades as it recedes into its American-born later generations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-kicker">New York City &middot; foreign-born by country of birth, 1900 to 2020</span>
+    <h1 class="brand-mark">Where New York came from</h1>
+    <span class="brand-sub">Immigrant waves rise &mdash; then fade as the census loses sight of their American-born grandchildren</span>
+  </div>
+  <div class="topbar-right">
+    <a class="source" href="methodology.html">Methodology &amp; sources</a>
+    <button id="aiCaution" class="ai-caution" type="button">AI caution</button>
+  </div>
+</header>
+
+<section class="clock" aria-label="census year">
+  <button id="restart" class="transport restart" title="Restart" aria-label="Restart">&#x21BA;</button>
+  <button id="play" class="transport play" title="Play / pause" aria-label="Play or pause">&#10073;&#10073;</button>
+  <div class="year-wrap">
+    <div id="era" class="era">the open door</div>
+    <div id="year" class="year">1900</div>
+    <input id="scrub" class="scrub" type="range" min="0" max="1000" value="0" step="1" aria-label="Scrub through census years">
+  </div>
+  <div class="speeds" role="group" aria-label="Playback speed">
+    <button class="speed" data-speed="0.5">0.5&times;</button>
+    <button class="speed is-active" data-speed="1">1&times;</button>
+    <button class="speed" data-speed="2">2&times;</button>
+  </div>
+</section>
+
+<section class="legendbar">
+  <div id="regionLegend" class="region-legend"></div>
+  <div class="fade-legend">
+    <span class="fade-swatch"></span>
+    <span>Bars <strong>fade</strong> once a wave is past its peak &mdash; its immigrants are aging and its US-born grandchildren are no longer counted by birthplace</span>
+  </div>
+</section>
+
+<main class="stage">
+  <div id="track" class="track"><!-- lanes injected by app.js --></div>
+</main>
+
+<footer class="footnote">
+  <p id="footLede">Each bar is the number of <strong>foreign-born</strong> New Yorkers born in that country &mdash; the immigrant (first) generation only. The census cannot trace a group by nation past the second generation, so a wave that stops arriving both shrinks and fades from view.</p>
+  <p class="src">Source: U.S. Census Bureau decennial censuses (1900&ndash;1930 country-of-birth tables) and NYC Department of City Planning, <em>The Newest New Yorkers</em> (1970&ndash;2011) and the Census ACS (2020). 1940&ndash;1960 are interpolated. See the <a href="methodology.html">methodology</a> for definitions, country-boundary notes (Poland, U.S.S.R./Russia) and the meaning of the fade.</p>
+</footer>
+
+<div id="caution" class="caution-pop" hidden>
+  <div class="caution-card">
+    <button class="caution-close" id="cautionClose" aria-label="Close">&times;</button>
+    <h2>How this was built &amp; what to double-check</h2>
+    <ul id="cautionList"></ul>
+    <p class="caution-foot">Built with AI assistance. Numbers are sourced and computed transparently &mdash; see the <a href="methodology.html">methodology</a>.</p>
+  </div>
+</div>
+
+<script src="app.js?v=3"></script>
+</body>
+</html>

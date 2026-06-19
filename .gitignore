@@ -1,0 +1,4 @@
+data/sources/
+.DS_Store
+.claude/
+*.pdf
