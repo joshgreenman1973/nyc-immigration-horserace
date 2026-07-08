@@ -35,7 +35,7 @@
 <div class="wrap">
   <a class="back" href="index.html">&larr; Back to the chart</a>
   <h1>Methodology &amp; sources</h1>
-  <p class="lede">This chart races New York City's foreign-born population by country of birth across the censuses from 1900 to 2020, and fades each wave as it recedes. Here is exactly where the data comes from, how the fade is defined and what it can and cannot show.</p>
+  <p class="lede">This chart races New York City's foreign-born population by country of birth from 1900 to 2023, and fades each wave as it recedes. Here is exactly where the data comes from, how the fade is defined and what it can and cannot show.</p>
 
   <h2>What the chart shows</h2>
   <p>Each bar is the number of <strong>foreign-born</strong> New Yorkers born in a given country at each decennial census &mdash; the immigrant, or first, generation. It does <em>not</em> include their US-born children or grandchildren. The chart shows the largest groups at any moment (the top dozen), so a country appears when it grows large enough and drops off when it is overtaken.</p>
@@ -51,9 +51,10 @@
     <li><strong>1920 and 1930:</strong> U.S. Census Bureau, 1930 Census, Volume II (Population, General Report), Chapter 5, Table 9 ("Country of birth of the foreign-born population, by sex, for cities of 100,000 or more: 1930 and 1920"), New York, N.Y. <a href="https://www2.census.gov/library/publications/decennial/1930/population-volume-2/16440598v2ch06.pdf" target="_blank" rel="noopener">census.gov</a> The 1930 city total derived from this table (2,358,686) matches the published census total.</li>
     <li><strong>1940, 1950, 1960:</strong> not yet transcribed from primary sources. These cells are left blank and the bars interpolate across them. For the large European groups the real trend across this span is a steady decline, so the interpolation understates none of the major peaks (which fall in 1900&ndash;1930) but should not be read as exact mid-century figures.</li>
     <li><strong>2020:</strong> U.S. Census Bureau, American Community Survey 2022 5-year estimates, table B05006 ("Place of Birth for the Foreign-Born Population"), New York city. China combines the mainland, Hong Kong and Taiwan to match the City Planning definition used for 1970&ndash;2011. <a href="https://data.census.gov/table/ACSDT5Y2022.B05006?g=160XX00US3651000" target="_blank" rel="noopener">data.census.gov</a></li>
+    <li><strong>2023:</strong> NYC Department of City Planning, <em>The Newest New Yorkers 2026</em>, Chapter 2, "Top 20 Foreign-born Groups" (based on the 2023 American Community Survey). <a href="https://www.nyc.gov/assets/planning/newest-new-yorkers-2026/Ch2.html" target="_blank" rel="noopener">nyc.gov</a> The report ranks the 20 largest groups; the nine chart countries that fall outside its top 20 (Germany, Ireland, Austria, Hungary, Poland, Romania, Greece, Sweden and Cuba) are taken from the 2023 ACS 1-year table B05006, summed across the five boroughs, on the same 2023 basis. China again combines the mainland, Hong Kong and Taiwan. In 2023 China (397,249) overtook the Dominican Republic (389,779) as the largest group, Bangladesh rose to seventh, and Ghana became the first African country in the city's top 20 in the post-1965 era.</li>
     <li>City foreign-born totals cross-checked against NYC City Planning's "Foreign-born Population, New York City &amp; Boroughs, 1900&ndash;2010."</li>
   </ul>
-  <p style="color:var(--ink-dim);font-size:13.5px;">Every filled figure is sourced to the volumes above. Where a decade's number for a country could not be reliably sourced, that cell is left blank rather than estimated, and the bar interpolates across the gap. The 2020 column uses the ACS 2022 5-year estimate (centered on 2020).</p>
+  <p style="color:var(--ink-dim);font-size:13.5px;">Every filled figure is sourced to the volumes above. Where a decade's number for a country could not be reliably sourced, that cell is left blank rather than estimated, and the bar interpolates across the gap. The 2020 column uses the ACS 2022 5-year estimate (centered on 2020); the 2023 column uses the 2023 ACS as published in <em>The Newest New Yorkers 2026</em>. The final step spans three years (2020&ndash;2023) rather than a full decade, and animates over the same interval on the clock.</p>
 
   <h2>Definitions and boundary changes</h2>
   <ul>
@@ -66,7 +67,7 @@
   </ul>
 
   <h2>What is interpolated</h2>
-  <p>A census is taken once a decade. Between censuses, each country's value is linearly interpolated so the bars move continuously. <strong>The numbers are exact only at each decade</strong> (when the year reads 1900, 1910, … 2020). A wave that the census had not yet recorded grows in from zero; a bar with no further data ebbs toward zero.</p>
+  <p>A census is taken once a decade. Between censuses, each country's value is linearly interpolated so the bars move continuously. <strong>The numbers are exact only at each data year</strong> (when the year reads 1900, 1910, … 2020, and the final 2023). A wave that the census had not yet recorded grows in from zero; a bar with no further data ebbs toward zero.</p>
 
   <h2>Limitations</h2>
   <ul>

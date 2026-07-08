@@ -89,9 +89,16 @@ function peakOf(c){
 
 // fade factor 0..1: 1 = full strength (at/before peak), lower = faded.
 // Past peak, fade tracks how far the wave has fallen from its high-water mark.
+// The fade is a long-arc, generational device, so it only engages once a wave
+// has declined across a full decade: a group whose peak is at the most recent
+// decade (2020) or the final 2023 estimate is still "current" and stays full
+// strength. This also stops the uneven, cross-vintage 2020 -> 2023 step (a 5-year
+// ACS estimate vs. the 2023 report) from falsely dimming still-dominant groups
+// like China on a single recent wiggle.
 function fadeOf(c, fi, v){
   peakOf(c);
   if (fi <= c._peakIdx) return 1;
+  if (c._peakIdx >= YEARS.length - 2) return 1; // peak at 2020 or 2023: still current
   const ratio = v / c._peak;          // 1 at peak, →0 as wave recedes
   return Math.max(0.18, ratio);       // floor so a faint bar stays legible
 }
@@ -178,9 +185,16 @@ function frame(now){
   paint();
   requestAnimationFrame(frame);
 }
+// interpolate the real calendar year from the YEARS array (handles the uneven
+// final 2020 -> 2023 step, which a fixed FIRST + fi*STEP would mislabel).
+function yearAt(fi){
+  const i = Math.floor(fi), frac = fi - i;
+  const a = YEARS[i], b = (i + 1 < YEARS.length) ? YEARS[i + 1] : a;
+  return Math.round(a + (b - a) * frac);
+}
 function paint(snap){
   const fi = Math.min(T, SPAN);
-  const Y = Math.round(FIRST + fi * STEP);
+  const Y = yearAt(fi);
   yearEl.textContent = Y;
   eraEl.textContent = eraLabel(Y);
   render(fi, snap);
@@ -193,7 +207,10 @@ async function init(){
   for (const c of COUNTRIES) fillInternalGaps(c.counts);
   YEARS = DATA.years;
   FIRST = DATA.timeline.first; LAST = DATA.timeline.last; STEP = DATA.timeline.step;
-  SPAN = (LAST - FIRST) / STEP;
+  // SPAN is a column index range (one unit per data column), not a year range,
+  // so an uneven final step (2020 -> 2023) advances at the same clock pace as a
+  // decade. The displayed year is read from the YEARS array, not FIRST + fi*STEP.
+  SPAN = YEARS.length - 1;
 
   buildRows();
   buildLegend();
