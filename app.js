@@ -12,7 +12,7 @@
    then fades in proportion to how far it has fallen from that peak.
    ============================================================ */
 
-const DISPLAY = 12;             // bars shown at once (top N by size)
+const DISPLAY = 18;             // bars shown at once (top N by size)
 const ROW = 46;                 // px per lane
 const MAX_BAR = 82;             // leader bar caps here (% of track)
 const SECONDS_PER_DECADE = 2.0;
